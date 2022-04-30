@@ -14,9 +14,9 @@ public class SpringbootEmailApplication {
         SpringApplication.run(SpringbootEmailApplication.class, args);
     }
 
-    @Bean
-    public JavaMailSender javaMailSender() {
-        return new JavaMailSenderImpl();
-    }
+//    @Bean
+//    public JavaMailSender javaMailSender() {
+//        return new JavaMailSenderImpl();
+//    }
 
 }

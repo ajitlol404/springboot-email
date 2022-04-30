@@ -17,3 +17,7 @@ Create JavaMailSenderImpl bean in main class,
 Set properties with Properties class and JavaMailSenderImpl.
 
 
+Note: -
+To use without application.properties comment the code bean in main class and properties in application.properties.
+
+

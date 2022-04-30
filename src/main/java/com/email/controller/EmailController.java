@@ -3,11 +3,8 @@ package com.email.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Properties;
 
 @RestController
 public class EmailController {
@@ -27,12 +24,12 @@ public class EmailController {
          * Sending plain text email
          *
          * */
-//        SimpleMailMessage message=new SimpleMailMessage();
-//        message.setFrom(from);
-//        message.setTo(to);
-//        message.setSubject("This is a plain text mail.");
-//        message.setText("Hello Guys! This is a plain text email.");
-//        mailSender.send(message);
+        SimpleMailMessage message=new SimpleMailMessage();
+        message.setFrom(from);
+        message.setTo(to);
+        message.setSubject("This is a plain text mail.");
+        message.setText("Hello Guys! This is a plain text email.");
+        mailSender.send(message);
 
 
         /*
@@ -100,26 +97,26 @@ public class EmailController {
          * (Create JavaMailSenderImpl bean in main class)
          *
          * */
-        JavaMailSenderImpl mailSenderImpl = new JavaMailSenderImpl();
-        mailSenderImpl.setHost("smtp.gmail.com");
-        mailSenderImpl.setPort(587);
-        mailSenderImpl.setUsername("tarunmicromax12@gmail.com");
-        mailSenderImpl.setPassword("dswfvtrgrfxkspqq");
-
-        Properties properties = new Properties();
-        properties.setProperty("mail.smtp.auth", "true");
-        properties.setProperty("mail.smtp.starttls.enable", "true");
-
-        mailSenderImpl.setJavaMailProperties(properties);
-
-        SimpleMailMessage message = new SimpleMailMessage();
-
-        message.setFrom(from);
-        message.setTo(to);
-        message.setSubject("This is a plain text email");
-        message.setText("Hello guys! This is a plain text email.");
-
-        mailSenderImpl.send(message);
+//        JavaMailSenderImpl mailSenderImpl = new JavaMailSenderImpl();
+//        mailSenderImpl.setHost("smtp.gmail.com");
+//        mailSenderImpl.setPort(587);
+//        mailSenderImpl.setUsername("tarunmicromax12@gmail.com");
+//        mailSenderImpl.setPassword("dswfvtrgrfxkspqq");
+//
+//        Properties properties = new Properties();
+//        properties.setProperty("mail.smtp.auth", "true");
+//        properties.setProperty("mail.smtp.starttls.enable", "true");
+//
+//        mailSenderImpl.setJavaMailProperties(properties);
+//
+//        SimpleMailMessage message = new SimpleMailMessage();
+//
+//        message.setFrom(from);
+//        message.setTo(to);
+//        message.setSubject("This is a plain text email");
+//        message.setText("Hello guys! This is a plain text email.");
+//
+//        mailSenderImpl.send(message);
 
         System.out.println("Mail sent...");
     }
