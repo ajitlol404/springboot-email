@@ -20,7 +20,7 @@ Set properties with Properties class and JavaMailSenderImpl.
 Note: -
 To use without application.properties comment the code bean in main class and properties in application.properties.
 
-If main is not get sending the use jakarta.activation-api dependencies
+If mail is not get sended then use jakarta.activation-api dependencies
 <dependency>
     <groupId>jakarta.activation</groupId>
     <artifactId>jakarta.activation-api</artifactId>
